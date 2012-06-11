@@ -2,7 +2,7 @@
 
 pkgname=unison
 pkgver=2.40.63
-pkgrel=3
+pkgrel=4
 pkgdesc="Unison is a file-synchronization tool"
 arch=(i686 x86_64)
 license=('GPL2')
@@ -47,4 +47,6 @@ package() {
  # make symlink for .desktop file
   cd "$pkgdir"/usr/bin
   ln -s unison-gtk2 unison-x11
+ # make versioned symlink #29827
+  ln -s unison unison-2.40
 }
