@@ -35,7 +35,7 @@ build() {
 
 package() {
 	cd "$_archive"
-	install -Dm0755 -t "$pkgdir/usr/bin/" "src/$pkgname"{,-gui}
+	install -Dm0755 -t "$pkgdir/usr/bin/" "src/$pkgname"{,-fsmonitor,-gui}
 	install -Dm0644 -t "$pkgdir/usr/share/applications/" "../$pkgname.desktop"
 	install -Dm0644 -t "$pkgdir/usr/share/man/man1/" "man/$pkgname.1"
 	install -Dm0644 icons/U.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
